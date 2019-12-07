@@ -26,6 +26,49 @@
                         break;
                 }
             }
+
+        function playRound(playerSelection, computerSelection) {
+            // This function wants to define the rules
+            // then evaluate the input according to the rules
+            // then return a string which declares a winner and why
+            playerSelection = playerSelection.toLowerCase();
+            computerSelection = computerSelection.toLowerCase();
+            
+           //function validInput(playerSelection) {
+            //    if (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors" || playerSelection !== "lizard" || playerSelection !== "spock") {
+            //    return "That is not a valid input. Please enter either rock, paper, scissors, lizard, or Spock."
+            //    }
+            //}
+            
+            //validInput(playerSelection);
+
+
+            
+            if (playerSelection == computerSelection) {
+                return `Draw! You both chose ${playerSelection}`;      
+            } else if (playerSelection == "rock" && computerSelection == "scissors") {
+                return `You win! Your ${playerSelection} smashes ${computerSelection}!`;
+            } else if (playerSelection == "rock" && computerSelection == "lizard") {
+                return `You win! Your ${playerSelection} crushes ${computerSelection}!`;
+            } else if (playerSelection == "paper" && computerSelection == "rock") {
+                return `You win! Your ${playerSelection} covers ${computerSelection}!`;
+            } else if (playerSelection == "paper" && computerSelection == "spock") {
+                return `You win! Your ${playerSelection} disproves ${computerSelection}!`;
+            } else if (playerSelection == "scissors" && computerSelection == "paper") {
+                return `You win! Your ${playerSelection} cuts ${computerSelection}!`;
+            } else if (playerSelection == "scissors" && computerSelection == "lizard") {
+                return `You win! Your ${playerSelection} decapitates ${computerSelection}!`;
+            } else if (playerSelection == "lizard" && computerSelection == "paper") {
+                return `You win! Your ${playerSelection} eats ${computerSelection}!`;
+            } else if (playerSelection == "lizard" && computerSelection == "spock") {
+                return `You win! Your ${playerSelection} poisons ${computerSelection}!`;
+            } else if (playerSelection == "spock" && computerSelection == "rock") {
+                return `You win! Your ${playerSelection} vaporizes ${computerSelection}!`;
+            } else if (playerSelection == "spock" && computerSelection == "scissors") {
+                return `You win! Your ${playerSelection} smashes ${computerSelection}!`;
+            } else {
+                return `You lose! ${computerSelection} beats ${playerSelection}!`;  }
+        }
         
         
         </script>
