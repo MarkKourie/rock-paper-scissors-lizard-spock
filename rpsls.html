@@ -36,51 +36,57 @@
             if (playerSelection == computerSelection) {
                 return `Draw! You both chose ${playerSelection}`;      
             } else if (playerSelection == "rock" && computerSelection == "scissors") {
-                return `You win! Your ${playerSelection} smashes ${computerSelection}!`;
+                return `You win! Rock smashes scissors!`;
             } else if (playerSelection == "rock" && computerSelection == "lizard") {
-                return `You win! Your ${playerSelection} crushes ${computerSelection}!`;
+                return `You win! Rock crushes lizard!`;
             } else if (playerSelection == "paper" && computerSelection == "rock") {
-                return `You win! Your ${playerSelection} covers ${computerSelection}!`;
+                return `You win! Paper covers rock!`;
             } else if (playerSelection == "paper" && computerSelection == "spock") {
-                return `You win! Your ${playerSelection} disproves ${computerSelection}!`;
+                return `You win! Paper disproves Spock!`;
             } else if (playerSelection == "scissors" && computerSelection == "paper") {
-                return `You win! Your ${playerSelection} cuts ${computerSelection}!`;
+                return `You win! Scissors cuts paper!`;
             } else if (playerSelection == "scissors" && computerSelection == "lizard") {
-                return `You win! Your ${playerSelection} decapitates ${computerSelection}!`;
+                return `You win! Scissors decapitates lizard!`;
             } else if (playerSelection == "lizard" && computerSelection == "paper") {
-                return `You win! Your ${playerSelection} eats ${computerSelection}!`;
+                return `You win! Lizard eats paper!`;
             } else if (playerSelection == "lizard" && computerSelection == "spock") {
-                return `You win! Your ${playerSelection} poisons ${computerSelection}!`;
+                return `You win! Lizard poisons Spock!`;
             } else if (playerSelection == "spock" && computerSelection == "rock") {
-                return `You win! Your ${playerSelection} vaporizes ${computerSelection}!`;
+                return `You win! Spock vaporizes rock!`;
             } else if (playerSelection == "spock" && computerSelection == "scissors") {
-                return `You win! Your ${playerSelection} smashes ${computerSelection}!`;
+                return `You win! Spock smashes scissors!`;
             } else {
                 return `You lose! ${computerSelection} beats ${playerSelection}!`;  }
         }
         
         function game() {
-            //This function should call the playRound function to play 5 rounds
-            //The score should be kept track of, and a winner or loser should be reported at the end
-            //use console.log() to notify the results each round and the final result. 
-            //uses prompt() to get input from the player
-            //use helper functions if necessary
-            //rework previous functions if necessary - e.g. return values. 
+            
             let numberOfRounds = 0;
             let validInput = ["rock", "paper", "scissors", "lizard", "spock"];
+            let playerScore = 0;
+            let computerScore = 0;
             
             while (numberOfRounds < 5) {          
                 playerSelection = prompt("Choose rock, paper, scissors, lizard or Spock");
 
                 if (validInput.includes(playerSelection.toLowerCase())) {      
                     computerSelection = computerPlay();
-                    console.log(playRound(playerSelection, computerSelection));
+                    let result = playRound(playerSelection, computerSelection)
+                    console.log(result);
+                    result.includes("win") ? playerScore++ :
+                    result.includes("lose") ? computerScore++ :
+                    null;
                     numberOfRounds++;
+                    console.log(`Player Score: ${playerScore}. Enemy Score: ${computerScore}. Round ${numberOfRounds}/5`)    
                 } else {
                     console.log("That is not a valid input. Please enter either rock, paper, scissors, lizard, or Spock.");
                     continue;
                 }
-            } 
+            }
+            
+            playerScore == computerScore ? console.log("Whoa. It's a draw! What are the odds?") :
+            playerScore > computerScore ? console.log("Yaas queen! You win the game!") :
+            console.log("Sorry. The computer won. You were beaten by a silly JavaScript game. Go think about what you have done, or play again.");
 
 
         }
