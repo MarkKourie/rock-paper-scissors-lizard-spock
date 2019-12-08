@@ -28,22 +28,11 @@
             }
 
         function playRound(playerSelection, computerSelection) {
-            // This function wants to define the rules
-            // then evaluate the input according to the rules
-            // then return a string which declares a winner and why
+
             playerSelection = playerSelection.toLowerCase();
             computerSelection = computerSelection.toLowerCase();
             
-           //function validInput(playerSelection) {
-            //    if (playerSelection !== "rock" || playerSelection !== "paper" || playerSelection !== "scissors" || playerSelection !== "lizard" || playerSelection !== "spock") {
-            //    return "That is not a valid input. Please enter either rock, paper, scissors, lizard, or Spock."
-            //    }
-            //}
-            
-            //validInput(playerSelection);
-
-
-            
+            //I want to change this to use a selection of cases instead of having each description when winning. I.e. to have a win funciton and a lose function which respectively call the correct description!
             if (playerSelection == computerSelection) {
                 return `Draw! You both chose ${playerSelection}`;      
             } else if (playerSelection == "rock" && computerSelection == "scissors") {
@@ -70,7 +59,33 @@
                 return `You lose! ${computerSelection} beats ${playerSelection}!`;  }
         }
         
-        
+        function game() {
+            //This function should call the playRound function to play 5 rounds
+            //The score should be kept track of, and a winner or loser should be reported at the end
+            //use console.log() to notify the results each round and the final result. 
+            //uses prompt() to get input from the player
+            //use helper functions if necessary
+            //rework previous functions if necessary - e.g. return values. 
+            let numberOfRounds = 0;
+            let validInput = ["rock", "paper", "scissors", "lizard", "spock"];
+            
+            while (numberOfRounds < 5) {          
+                playerSelection = prompt("Choose rock, paper, scissors, lizard or Spock");
+
+                if (validInput.includes(playerSelection.toLowerCase())) {      
+                    computerSelection = computerPlay();
+                    console.log(playRound(playerSelection, computerSelection));
+                    numberOfRounds++;
+                } else {
+                    console.log("That is not a valid input. Please enter either rock, paper, scissors, lizard, or Spock.");
+                    continue;
+                }
+            } 
+
+
+        }
+
+
         </script>
     </body>
 </html>
