@@ -32,7 +32,6 @@
             playerSelection = playerSelection.toLowerCase();
             computerSelection = computerSelection.toLowerCase();
             
-            //I want to change this to use a selection of cases instead of having each description when winning. I.e. to have a win funciton and a lose function which respectively call the correct description!
             if (playerSelection == computerSelection) {
                 return `Draw! You both chose ${playerSelection}`;      
             } else if (playerSelection == "rock" && computerSelection == "scissors") {
@@ -77,8 +76,7 @@
                 return `You lose! Spock smashes scissors!`;
             } else {
                 return `Fatal error! How did that happen?`;
-                break;
-              }
+            }
         }
         
         function game() {
