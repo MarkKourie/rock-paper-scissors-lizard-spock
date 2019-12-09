@@ -55,11 +55,48 @@
                 return `You win! Spock vaporizes rock!`;
             } else if (playerSelection == "spock" && computerSelection == "scissors") {
                 return `You win! Spock smashes scissors!`;
+            }   else if (playerSelection == "scissors" && computerSelection == "rock") {
+                return `You lose! Rock smashes scissors!`;
+            } else if (playerSelection == "lizard" && computerSelection == "rock") {
+                return `You lose! Rock crushes lizard!`;
+            } else if (playerSelection == "rock" && computerSelection == "paper") {
+                return `You lose! Paper covers rock!`;
+            } else if (playerSelection == "spock" && computerSelection == "paper") {
+                return `You lose! Paper disproves Spock!`;
+            } else if (playerSelection == "paper" && computerSelection == "scissors") {
+                return `You lose! Scissors cuts paper!`;
+            } else if (playerSelection == "lizard" && computerSelection == "scissors") {
+                return `You lose! Scissors decapitates lizard!`;
+            } else if (playerSelection == "paper" && computerSelection == "lizard") {
+                return `You lose! Lizard eats paper!`;
+            } else if (playerSelection == "spock" && computerSelection == "lizard") {
+                return `You lose! Lizard poisons Spock!`;
+            } else if (playerSelection == "rock" && computerSelection == "spock") {
+                return `You lose! Spock vaporizes rock!`;
+            } else if (playerSelection == "scissors" && computerSelection == "spock") {
+                return `You lose! Spock smashes scissors!`;
             } else {
-                return `You lose! ${computerSelection} beats ${playerSelection}!`;  }
+                return `Fatal error! How did that happen?`;
+                break;
+              }
         }
         
         function game() {
+
+            console.log(`WELCOME TO ROCK, PAPER, SCISSORS, LIZARD, SPOCK \n 
+            RULES \n 
+            Scissors cuts paper. \n
+            Paper covers rock. \n 
+            Rock crushes lizard. \n
+            Lizard poisons Spock. \n
+            Spock smashes scissors. \n
+            Scissors decapitates lizard. \n 
+            Lizard eats paper. \n
+            Paper disproves Spock. \n
+            Spock vaporizes rock. \n
+            Rock crushes scissors. \n
+            \n
+            Live Long and Prosper!`)
             
             let numberOfRounds = 0;
             let validInput = ["rock", "paper", "scissors", "lizard", "spock"];
