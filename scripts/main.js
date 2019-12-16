@@ -156,4 +156,8 @@ function displayScoreInfo() {
 }
 
 
-//my brain is hurting. I can't manage this right now. I'll try again fresh tomorrow morning. 
+//The basics are now there. I want to still: 
+// 1. make it pretty - so add images, colour, font changes, etc
+// 2. add logic to play 5 rounds
+// 3. add animations/sounds?
+// 4. add final version to Odin solutions 
