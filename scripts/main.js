@@ -1,3 +1,5 @@
+
+
 function generateComputerSelection() {
     switch (Math.floor(Math.random() * 5)) {
         case 0:
@@ -20,55 +22,55 @@ function generateComputerSelection() {
 
 function playRound(playerSelection, computerSelection) {
 
-playerSelection = playerSelection.toLowerCase();
-computerSelection = computerSelection.toLowerCase();
-let resultMessage = document.querySelector("#result-message");
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
 
-if (playerSelection == computerSelection) {
-    resultMessage.textContent = `Draw! You both chose ${playerSelection}`;      
-} else if (playerSelection == "rock" && computerSelection == "scissors") {
-    resultMessage.textContent = `You win! Rock smashes scissors!`;
-} else if (playerSelection == "rock" && computerSelection == "lizard") {
-    resultMessage.textContent = `You win! Rock crushes lizard!`;
-} else if (playerSelection == "paper" && computerSelection == "rock") {
-    resultMessage.textContent = `You win! Paper covers rock!`;
-} else if (playerSelection == "paper" && computerSelection == "spock") {
-    resultMessage.textContent = `You win! Paper disproves Spock!`;
-} else if (playerSelection == "scissors" && computerSelection == "paper") {
-    resultMessage.textContent = `You win! Scissors cuts paper!`;
-} else if (playerSelection == "scissors" && computerSelection == "lizard") {
-    resultMessage.textContent = `You win! Scissors decapitates lizard!`;
-} else if (playerSelection == "lizard" && computerSelection == "paper") {
-    resultMessage.textContent = `You win! Lizard eats paper!`;
-} else if (playerSelection == "lizard" && computerSelection == "spock") {
-    reresultMessage.textContent =turn `You win! Lizard poisons Spock!`;
-} else if (playerSelection == "spock" && computerSelection == "rock") {
-    resultMessage.textContent = `You win! Spock vaporizes rock!`;
-} else if (playerSelection == "spock" && computerSelection == "scissors") {
-    resultMessage.textContent = `You win! Spock smashes scissors!`;
-}   else if (playerSelection == "scissors" && computerSelection == "rock") {
-    resultMessage.textContent = `You lose! Rock smashes scissors!`;
-} else if (playerSelection == "lizard" && computerSelection == "rock") {
-    resultMessage.textContent = `You lose! Rock crushes lizard!`;
-} else if (playerSelection == "rock" && computerSelection == "paper") {
-    resultMessage.textContent = `You lose! Paper covers rock!`;
-} else if (playerSelection == "spock" && computerSelection == "paper") {
-    resultMessage.textContent = `You lose! Paper disproves Spock!`;
-} else if (playerSelection == "paper" && computerSelection == "scissors") {
-    resultMessage.textContent = `You lose! Scissors cuts paper!`;
-} else if (playerSelection == "lizard" && computerSelection == "scissors") {
-    resultMessage.textContent = `You lose! Scissors decapitates lizard!`;
-} else if (playerSelection == "paper" && computerSelection == "lizard") {
-    resultMessage.textContent = `You lose! Lizard eats paper!`;
-} else if (playerSelection == "spock" && computerSelection == "lizard") {
-    resultMessage.textContent = `You lose! Lizard poisons Spock!`;
-} else if (playerSelection == "rock" && computerSelection == "spock") {
-    resultMessage.textContent = `You lose! Spock vaporizes rock!`;
-} else if (playerSelection == "scissors" && computerSelection == "spock") {
-    resultMessage.textContent = `You lose! Spock smashes scissors!`;
-} else {
-    resultMessage.textContent = `Fatal error! How did that happen?`;
-}
+
+    if (playerSelection == computerSelection) {
+        resultMessage.textContent = `Draw! You both chose ${playerSelection}`;      
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
+        resultMessage.textContent = `You win! Rock smashes scissors!`;
+    } else if (playerSelection == "rock" && computerSelection == "lizard") {
+        resultMessage.textContent = `You win! Rock crushes lizard!`;
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
+        resultMessage.textContent = `You win! Paper covers rock!`;
+    } else if (playerSelection == "paper" && computerSelection == "spock") {
+        resultMessage.textContent = `You win! Paper disproves Spock!`;
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        resultMessage.textContent = `You win! Scissors cuts paper!`;
+    } else if (playerSelection == "scissors" && computerSelection == "lizard") {
+        resultMessage.textContent = `You win! Scissors decapitates lizard!`;
+    } else if (playerSelection == "lizard" && computerSelection == "paper") {
+        resultMessage.textContent = `You win! Lizard eats paper!`;
+    } else if (playerSelection == "lizard" && computerSelection == "spock") {
+        resultMessage.textContent = `You win! Lizard poisons Spock!`;
+    } else if (playerSelection == "spock" && computerSelection == "rock") {
+        resultMessage.textContent = `You win! Spock vaporizes rock!`;
+    } else if (playerSelection == "spock" && computerSelection == "scissors") {
+        resultMessage.textContent = `You win! Spock smashes scissors!`;
+    }   else if (playerSelection == "scissors" && computerSelection == "rock") {
+        resultMessage.textContent = `You lose! Rock smashes scissors!`;
+    } else if (playerSelection == "lizard" && computerSelection == "rock") {
+        resultMessage.textContent = `You lose! Rock crushes lizard!`;
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
+        resultMessage.textContent = `You lose! Paper covers rock!`;
+    } else if (playerSelection == "spock" && computerSelection == "paper") {
+        resultMessage.textContent = `You lose! Paper disproves Spock!`;
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        resultMessage.textContent = `You lose! Scissors cuts paper!`;
+    } else if (playerSelection == "lizard" && computerSelection == "scissors") {
+        resultMessage.textContent = `You lose! Scissors decapitates lizard!`;
+    } else if (playerSelection == "paper" && computerSelection == "lizard") {
+        resultMessage.textContent = `You lose! Lizard eats paper!`;
+    } else if (playerSelection == "spock" && computerSelection == "lizard") {
+        resultMessage.textContent = `You lose! Lizard poisons Spock!`;
+    } else if (playerSelection == "rock" && computerSelection == "spock") {
+        resultMessage.textContent = `You lose! Spock vaporizes rock!`;
+    } else if (playerSelection == "scissors" && computerSelection == "spock") {
+        resultMessage.textContent = `You lose! Spock smashes scissors!`;
+    } else {
+        resultMessage.textContent = `Fatal error! How did that happen?`;
+    } 
 }
 
 function game() {
@@ -119,17 +121,38 @@ console.log("Sorry. The computer won. You were beaten by a silly JavaScript game
 }
 
 const buttons = Array.from(document.querySelectorAll('.btn'));
+const resultMessage = document.querySelector("#result-message");
+const playerScore = document.querySelector("#player-score");
+const enemyScore = document.querySelector("#enemy-score");
+const roundsPlayed = document.querySelector("#rounds-played");
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         const playerSelection = button.id;
         const computerSelection = generateComputerSelection();
         playRound(playerSelection, computerSelection);
+        updateScores();
+        displayScoreInfo();
     }) 
 });
 
-function updateScores() {
-    
+var currentPlayerScore = 0;
+var currentEnemyScore = 0;
+var currentRoundsPlayed = 0;
+
+function updateScores() { 
+    if (resultMessage.textContent.includes("win")) {
+        currentPlayerScore++;
+    } else if (resultMessage.textContent.includes("lose")) {
+        currentEnemyScore++;
+    }
+    currentRoundsPlayed++;
+}
+
+function displayScoreInfo() {
+    playerScore.textContent = `Your score: ${currentPlayerScore}`;
+    enemyScore.textContent = `Enemy score: ${currentEnemyScore}`;
+    roundsPlayed.textContent = `Number of Rounds: ${currentRoundsPlayed};`
 }
 
 
