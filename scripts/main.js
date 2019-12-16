@@ -146,7 +146,7 @@ function updateScores() {
     } else if (resultMessage.textContent.includes("lose")) {
         currentEnemyScore++;
     }
-    currentRoundsPlayed++;
+    currentRoundsPlayed == 5 ? endGame() : currentRoundsPlayed++;
 }
 
 function displayScoreInfo() {
@@ -155,6 +155,18 @@ function displayScoreInfo() {
     roundsPlayed.textContent = `Number of Rounds: ${currentRoundsPlayed};`
 }
 
+function endGame() {
+    currentPlayerScore == currentEnemyScore ? alert("Whoa. It's a draw! What are the odds?") :
+    currentPlayerScore > currentEnemyScore ? alert("Yaas queen! You win the game!") :
+    alert("Sorry. The computer won. You were beaten by a silly JavaScript game. Go think about what you have done, or play again.");
+    resetGame();
+}
+
+function resetGame() {
+    currentPlayerScore = 0;
+    currentEnemyScore = 0;
+    currentRoundsPlayed = 0;
+}
 
 //The basics are now there. I want to still: 
 // 1. make it pretty - so add images, colour, font changes, etc
