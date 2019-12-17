@@ -138,7 +138,7 @@ buttons.forEach((button) => {
 
 var currentPlayerScore = 0;
 var currentEnemyScore = 0;
-var currentRoundsPlayed = 0;
+var currentRoundsPlayed = 1;
 
 function updateScores() { 
     if (resultMessage.textContent.includes("win")) {
@@ -170,6 +170,5 @@ function resetGame() {
 
 //The basics are now there. I want to still: 
 // 1. make it pretty - so add images, colour, font changes, etc
-// 2. add logic to play 5 rounds
 // 3. add animations/sounds?
 // 4. add final version to Odin solutions 
