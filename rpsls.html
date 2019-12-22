@@ -3,32 +3,49 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors Lizard Spock</title>
-        <style></style>
-    </head>
+        <link href="styles/main.css" type="text/css" rel="stylesheet">    </head>
     <body>
-        <div id="button-container">
+        <div id="heading">
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+        </div>
+        
+        <div id="container">
+            <div id="rules">
+                <h3>Game Rules</h3>
+                <p>Scissors cuts paper.<br>
+                Paper covers rock.<br>
+                Rock crushes lizard.<br>
+                Lizard poisons Spock.<br>
+                Spock smashes scissors.<br>
+                Scissors decapitates lizard.<br>
+                Lizard eats paper.<br>
+                Paper disproves Spock.<br>
+                Spock vaporizes rock.<br>
+                Rock crushes scissors.</p>
+            </div>
+            <img class="pic" src="images/rock.png" id="rock-image">
             <button class="btn" id="rock">Rock</button>
+            <img class="pic" src="images/paper.png" id="paper-image">
             <button class="btn" id="paper">Paper</button>
-            <img src="images/scissors.png">
+            <img class="pic" src="images/scissors.png" id="scissors-image">
             <button class="btn" id="scissors">Scissors</button>
+            <img class="pic" src="images/lizard.png" id="lizard-image">
             <button class="btn" id="lizard">Lizard</button>
-            <img src="images/spock.png" height="200px" width="200px">
+            <img class="pic" src="images/big-spock.png" id="spock-image">
             <button class="btn" id="spock">Spock</button>
+            
+            <div id="game">
+                <h1 id="result-message"></h1>
+            </div>
+        
+            <div id="score">
+                <p id="player-score">Your score:</p>
+                <p id="enemy-score">Enemy score:</p>
+                <p id="rounds-played">Number of Rounds:</p>
+            </div>
+        
         </div>
 
-        <div id="game">
-            <h1 id="result-message"></h1>
-        </div>
-
-        <div id="score">
-            <p id="player-score">Your score:</p>
-            <p id="enemy-score">Enemy score:</p>
-            <p id="rounds-played">Number of Rounds:</p>
-        </div>
-    
-    
-    
-    
         <script src="scripts/main.js"></script>
     </body>
 </html>

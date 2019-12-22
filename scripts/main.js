@@ -73,53 +73,6 @@ function playRound(playerSelection, computerSelection) {
     } 
 }
 
-function game() {
-
-console.log(`WELCOME TO ROCK, PAPER, SCISSORS, LIZARD, SPOCK \n 
-RULES \n 
-Scissors cuts paper. \n
-Paper covers rock. \n 
-Rock crushes lizard. \n
-Lizard poisons Spock. \n
-Spock smashes scissors. \n
-Scissors decapitates lizard. \n 
-Lizard eats paper. \n
-Paper disproves Spock. \n
-Spock vaporizes rock. \n
-Rock crushes scissors. \n
-\n
-Live Long and Prosper!`)
-
-let numberOfRounds = 0;
-let validInput = ["rock", "paper", "scissors", "lizard", "spock"];
-let playerScore = 0;
-let computerScore = 0;
-
-while (numberOfRounds < 5) {          
-    
-    if (validInput.includes(playerSelection.toLowerCase())) {
-        playerSelection = sel      
-        computerSelection = computerPlay();
-        let result = playRound(playerSelection, computerSelection)
-        console.log(result);
-        result.includes("win") ? playerScore++ :
-        result.includes("lose") ? computerScore++ :
-        null;
-        numberOfRounds++;
-        console.log(`Player Score: ${playerScore}. Enemy Score: ${computerScore}. Round ${numberOfRounds}/5`)    
-    } else {
-        console.log("That is not a valid input. Please enter either rock, paper, scissors, lizard, or Spock.");
-        continue;
-    }
-}
-
-playerScore == computerScore ? console.log("Whoa. It's a draw! What are the odds?") :
-playerScore > computerScore ? console.log("Yaas queen! You win the game!") :
-console.log("Sorry. The computer won. You were beaten by a silly JavaScript game. Go think about what you have done, or play again.");
-
-
-}
-
 const buttons = Array.from(document.querySelectorAll('.btn'));
 const resultMessage = document.querySelector("#result-message");
 const playerScore = document.querySelector("#player-score");
@@ -152,7 +105,7 @@ function updateScores() {
 function displayScoreInfo() {
     playerScore.textContent = `Your score: ${currentPlayerScore}`;
     enemyScore.textContent = `Enemy score: ${currentEnemyScore}`;
-    roundsPlayed.textContent = `Number of Rounds: ${currentRoundsPlayed};`
+    roundsPlayed.textContent = `Number of Rounds: ${currentRoundsPlayed - 1};`
 }
 
 function endGame() {
@@ -165,10 +118,12 @@ function endGame() {
 function resetGame() {
     currentPlayerScore = 0;
     currentEnemyScore = 0;
-    currentRoundsPlayed = 0;
+    currentRoundsPlayed = 1;
 }
 
 //The basics are now there. I want to still: 
 // 1. make it pretty - so add images, colour, font changes, etc
 // 3. add animations/sounds?
 // 4. add final version to Odin solutions 
+
+//adding a comment to see something with Git
