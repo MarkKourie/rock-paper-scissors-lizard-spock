@@ -9,10 +9,6 @@ If anyone actually reads this and looks at my code, I would be more than happy t
 * What did you like? 
 * What do you think could be improved?
 
-I'm not 100% happy with how the playRound() function works. Ideally I wanted it to call the rules from a separate function that has fewer cases.But I wasn't able to figure out how to get that right yet. 
-
-Maybe one day I'll come back to it and make it smoother. For now, do give it a go and enjoy the greater variety of...
-
 ***ROCK PAPER SCISSORS LIZARD SPOCK***
 
 Live long and prosper!
